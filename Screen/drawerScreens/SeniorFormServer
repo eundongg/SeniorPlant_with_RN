@@ -1,0 +1,58 @@
+// // server.js
+
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const mongoose = require('mongoose');
+
+// import MONGO_URL from '@env';
+
+
+// const app = express();
+// const port = 3001;
+
+// // MongoDB 연결
+// mongoose.connect('mongodb://localhost:27017/SeniorPlant', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+// // MongoDB 스키마 정의
+// const elderSchema = new mongoose.Schema({
+//   name: String,
+//   age: Number,
+//   plantStatus: String,
+//   phoneNumber: String,
+//   specialNote: String,
+// });
+
+// // MongoDB 모델 생성
+// const Elder = mongoose.model('Elder', elderSchema);
+
+// // 미들웨어 설정
+// app.use(bodyParser.json());
+
+// // 어르신 정보 추가
+// app.post('/api/elders', async (req, res) => {
+//   try {
+//     const { name, age, phoneNumber, specialNote } = req.body;
+
+//     const newElder = new Elder({
+//       name,
+//       age,
+//       phoneNumber,
+//       specialNote,
+//     });
+
+//     await newElder.save();
+
+//     res.json({ status: 'success' });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send('Internal Server Error');
+//   }
+// });
+
+// // 서버 시작
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+// });
