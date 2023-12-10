@@ -153,10 +153,11 @@ const SeniorListScreen = ({ navigation }) => {
         <TouchableOpacity
           style={styles.btnAdd}
           onPress={() => navigation.navigate('SeniorForm')}>
-          <Text style={{ color: 'black' }}>✔ 어르신 정보 추가</Text>
+          <Text style={{ color: 'black' }}>✔ 어르신 정보 추가 </Text>
         </TouchableOpacity>
       </View>
     </View>
+
   );
 };
 
