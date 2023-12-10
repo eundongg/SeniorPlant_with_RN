@@ -6,10 +6,12 @@ import SplashScreen from './Screen/SplashScreen';
 import HomeScreen from './Screen/drawerScreens/HomeScreen';
 import SeniorListScreen from './Screen/drawerScreens/SeniorListScreen';
 import SeniorFormScreen from'./Screen/drawerScreens/SeniorFormScreen';
-
+import notificationScreen from './Screen/drawerScreens/notificationScreen';
+import MainScreen from './Screen/forSenior/MainScreen'
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+
 const Stack = createStackNavigator();
 //require('dotenv').config();
 
@@ -35,16 +37,28 @@ const App= () => {
           component={HomeScreen}
           options={{title: ''}}
         />
+        
         <Stack.Screen
           name="SeniorList"
           component={SeniorListScreen}
-          options={{ title: 'Senior List' }}
+          options={{ title: ''}}
         />     
         <Stack.Screen
           name="SeniorForm"
           component={SeniorFormScreen}
-          options={{title: "Form"}}
-        />        
+          options={{title: ''}}
+        />     
+        <Stack.Screen
+          name="notification"
+          component={notificationScreen}
+          options={{title: ''}}
+        />    
+        <Stack.Screen
+          name="Main"
+          component={MainScreen}
+          options={{title: ''}}
+        /> 
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

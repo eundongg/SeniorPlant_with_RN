@@ -8,23 +8,20 @@ import { View, Text, TouchableOpacity, StyleSheet,Image } from 'react-native';
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Image
-        source={require('../../android/app/src/main/assets/images/logo.png')}
-        style={{ width: wp(85), resizeMode: 'contain' }}
-      />
+      
       {/* 어르신 상태 확인 버튼 */}
       <View style={styles.btnArea}>
         <TouchableOpacity
           style={styles.btnCheck}
           onPress={() => navigation.navigate('SeniorList')}>
-          <Text style={{color:'black'}}>✔ 어르신 상태 확인</Text>
+          <Text style={{color:'black', fontSize: 30}}>💚 화분 물주기</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.btnArea}>
         <TouchableOpacity
           style={styles.btnAlarm}
           onPress={() => navigation.navigate('notification')}>
-          <Text style={{color: 'white'}}>✔ 알림 확인</Text>
+          <Text style={{color: 'white', fontSize: 30}}>☎️ 관리자에게 전화</Text>
         </TouchableOpacity>
       </View>      
     </View>
@@ -38,10 +35,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingLeft: wp(7),
     paddingRight: wp(7),
-    paddingTop: wp(7),
+    paddingTop: wp(25),
   },
   btnArea: {
-    height: hp(12),
+    height: hp(20),
     justifyContent: 'center',
     alignItems: 'center',
     paddingBottom: hp(1.5),
